@@ -83,8 +83,15 @@
                     <h5 class="forecast-item-temp">29 °C</h5>
                 </div>
             </div>
+            <button class="schedule-alert-btn">Schedule Alert</button>
         </section>
 
+        <section class="scheduled-alerts" style="display: none;">
+            <h2>Your Scheduled Alerts</h2>
+            <div class="alerts-list">
+                </div>
+            <button class="back-to-weather-btn">Back to Weather</button>
+        </section>
 
         <section class="search-city section-message">
             <img src="assets/message/search-city.png">
@@ -99,12 +106,43 @@
         <section class="not-found section-message" style="display: none;">
             <img src="assets/message/not-found.png">
             <div>
-                <h1>Search City</h1>
+                <h1>City Not Found</h1>
                 <h4 class="regular-txt">
-                    Find out the weather conditions of the city
+                    Please check the city name and try again.
                 </h4>
             </div>
         </section>
-    </main>   
+
+        <div class="alert-modal" style="display: none;">
+            <div class="modal-content">
+                <h3>Select Alert Type for <span class="alert-city-name"></span></h3>
+                <div class="alert-types">
+                    <label>
+                        <input type="checkbox" name="alertType" value="Thunderstorm"> Thunderstorm ⛈️
+                    </label>
+                    <label>
+                        <input type="checkbox" name="alertType" value="Drizzle"> Drizzle 🌦️
+                    </label>
+                    <label>
+                        <input type="checkbox" name="alertType" value="Rain"> Rain 🌧️
+                    </label>
+                    <label>
+                        <input type="checkbox" name="alertType" value="Snow"> Snow 🌨️
+                    </label>
+                    <label>
+                        <input type="checkbox" name="alertType" value="Clear"> Clear Sky ☀️
+                    </label>
+                    <label>
+                        <input type="checkbox" name="alertType" value="Clouds"> Clouds ☁️
+                    </label>
+                    <label>
+                        <input type="checkbox" name="alertType" value="Extreme Temp"> Extreme Temperature 🔥❄️
+                    </label>
+                    </div>
+                <button class="schedule-alert-confirm-btn">Schedule Alert</button>
+                <button class="cancel-alert-btn">Cancel</button>
+            </div>
+        </div>
+    </main>   
 </body>
-</html> 
+</html>
